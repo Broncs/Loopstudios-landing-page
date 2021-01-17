@@ -1,7 +1,24 @@
 @import "./variables";
 @import "./resets";
+@import "./header";
+@import "./section01";
+@import "./section02";
 
 body {
   font-family: $alanta;
   font-weight: weight(regular);
+}
+.container {
+  max-width: 1440px;
+  padding: 0 1.2rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 15px;
 }

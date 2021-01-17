@@ -1,0 +1,36 @@
+#creations {
+  margin-top: 4rem;
+
+  h2 {
+    font-family: $josefin;
+    text-transform: uppercase;
+    font-size: 1.7rem;
+    text-align: center;
+  }
+}
+
+.single-card {
+  position: relative;
+  height: 100px;
+
+  p {
+    color: $primary-white;
+    font-family: $josefin;
+    font-size: 1.8rem;
+    padding: 1rem;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+  }
+}
+.card-01 {
+  background-image: url("../../images/mobile/image-deep-earth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-02 {
+  background-image: url("../../images/mobile/image-night-arcade.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}

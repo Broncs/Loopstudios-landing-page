@@ -5,8 +5,149 @@
           box-sizing: border-box;
 }
 
+.header {
+  background-image: url("../../images/mobile/image-hero.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.nav-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 0 1rem;
+  position: fixed;
+  height: 50px;
+  top: 0;
+  right: 0;
+  left: 0;
+}
+
+.nav-menu.nav-scrolled {
+  background: black;
+}
+
+.logo-img img {
+  width: 70%;
+}
+
+.nav-scrolled {
+  background-color: black;
+}
+
+.nav-links {
+  display: none;
+}
+
+.main-hero-text {
+  color: white;
+  border: 1px solid #fff;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+}
+
+.main-hero-text h1 {
+  padding: 1.2rem;
+  line-height: 1.1;
+  letter-spacing: 1.2px;
+}
+
+.img-container {
+  margin-top: 4rem;
+}
+
+.img-container img {
+  width: 100%;
+}
+
+.section01-text {
+  text-align: center;
+}
+
+.section01-text h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  margin: 1.8rem 0 1.2rem;
+}
+
+.section01-text p {
+  color: #8c8c8c;
+  padding: 0 1rem;
+}
+
+#creations {
+  margin-top: 4rem;
+}
+
+#creations h2 {
+  font-family: "Josefin Sans", sans-serif;
+  text-transform: uppercase;
+  font-size: 1.7rem;
+  text-align: center;
+}
+
+.single-card {
+  position: relative;
+  height: 100px;
+}
+
+.single-card p {
+  color: white;
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.8rem;
+  padding: 1rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.card-01 {
+  background-image: url("../../images/mobile/image-deep-earth.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card-02 {
+  background-image: url("../../images/mobile/image-night-arcade.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 body {
   font-family: "Alata", sans-serif;
   font-weight: 400;
+}
+
+.container {
+  max-width: 1440px;
+  padding: 0 1.2rem;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+ul {
+  list-style: none;
+}
+
+p {
+  font-size: 15px;
 }
 /*# sourceMappingURL=main.css.map */
