@@ -1,0 +1,18 @@
+$primary-white: hsl(0, 0%, 100%);
+$primary-black: hsl(0, 0%, 0%);
+$primary-dark-grey: hsl(0, 0%, 55%);
+$primary-very-dark-grey: hsl(0, 0%, 41%);
+
+// FONTS =============
+$josefin: "Josefin Sans", sans-serif;
+$alanta: "Alata", sans-serif;
+
+@function weight($weight-name) {
+  @return map-get($font-weights, $weight-name);
+}
+
+$font-weights: (
+  "thin": 300,
+  "regular": 400,
+  "bold": 700,
+);
