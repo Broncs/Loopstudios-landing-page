@@ -1,6 +1,6 @@
 # Frontend Mentor - Loopstudios landing page
 
-🚀 Demonstração [liveDemo]();
+🚀 Demonstração [liveDemo](https://loopstudios-challenge.netlify.app/);
 ![Design preview for the Loopstudios landing page coding challenge](./design/desktop-preview.jpg)
 
 ## Welcome! 👋
