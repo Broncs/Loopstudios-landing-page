@@ -43,7 +43,7 @@
     </style>
   </head>
   <body>
-    <header class="header">
+    <header id="header" class="header">
       <nav class="nav">
         <div class="nav-menu">
           <div class="logo-img">
@@ -65,6 +65,21 @@
       <div class="text-width">
         <div class="main-hero-text">
           <h1>Immersive experiences that deliver</h1>
+        </div>
+      </div>
+
+      <div id="jsModal" class="modal">
+        <div class="modal__overlay jsOverlay"></div>
+        <div class="modal__container">
+          <img src="../images/logo.svg" alt="" />
+          <ul class="modal-links">
+            <li><a href="#about">About</a></li>
+            <li><a href="#creations">Careers</a></li>
+            <li>Events</li>
+            <li>Products</li>
+            <li>Support</li>
+          </ul>
+          <button class="modal__close jsModalClose">&#10005;</button>
         </div>
       </div>
     </header>
@@ -160,4 +175,6 @@
       >. Coded by <a href="#">Jhonatan Mendes</a>.
     </div>
   </body>
+
+  <script src="./index.js"></script>
 </html>

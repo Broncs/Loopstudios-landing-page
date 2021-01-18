@@ -24,6 +24,102 @@
           align-items: center;
 }
 
+.hamburger {
+  cursor: pointer;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 20;
+  padding: 2rem;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  opacity: 0;
+  visibility: hidden;
+  -webkit-transition: visibility 0s linear 0.1s, opacity 0.3s ease;
+  transition: visibility 0s linear 0.1s, opacity 0.3s ease;
+}
+
+.modal.open {
+  visibility: visible;
+  opacity: 1;
+  -webkit-transition-delay: 0s;
+          transition-delay: 0s;
+}
+
+.modal__overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  z-index: 21;
+  background-color: rgba(0, 0, 0, 0.7);
+}
+
+.modal__close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  border: none;
+  outline: none;
+  background: none;
+  font-size: 24px;
+  color: white;
+  font-weight: bold;
+}
+
+.modal__close:hover {
+  color: red;
+}
+
+.modal__container {
+  position: relative;
+  z-index: 22;
+  height: 100vh;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-box-shadow: 0 0 10px #fff;
+          box-shadow: 0 0 10px #fff;
+  margin: 0 auto;
+  padding: 30px;
+  background-color: black;
+  color: white;
+  text-align: left;
+}
+
+.modal__container img {
+  width: 50%;
+}
+
+.modal .modal-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 80vh;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.modal .modal-links li {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 1.3rem;
+}
+
 .nav-menu {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -42,10 +138,12 @@
   left: 0;
   right: 0;
   z-index: 10;
+  -webkit-transition: 0.5s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .nav-menu.nav-scrolled {
-  background: black;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .logo-img img {
@@ -62,7 +160,7 @@
 
 .main-hero-text {
   color: white;
-  border: 1px solid #fff;
+  border: 2px solid #fff;
   text-transform: uppercase;
   font-family: "Josefin Sans", sans-serif;
   max-width: 300px;
@@ -72,6 +170,7 @@
 .main-hero-text h1 {
   padding: 1.2rem;
   max-width: 250px;
+  font-weight: 300;
   line-height: 1.1;
   letter-spacing: 1.2px;
 }
@@ -125,6 +224,25 @@
   }
   .nav-links li {
     margin: 0 1rem;
+    padding-bottom: 8px;
+    cursor: pointer;
+    position: relative;
+  }
+  .nav-links li::after {
+    content: "";
+    background: white;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    margin-left: 5px;
+    height: 2px;
+    width: 2rem;
+    opacity: 0;
+    -webkit-transition: 0.3s ease-in-out;
+    transition: 0.3s ease-in-out;
+  }
+  .nav-links li:hover::after {
+    opacity: 1;
   }
 }
 
@@ -244,6 +362,14 @@
   text-align: center;
   margin: 1rem auto;
   display: block;
+  cursor: pointer;
+  -webkit-transition: 0.2s ease-in-out;
+  transition: 0.2s ease-in-out;
+}
+
+.card-container .card-button:hover {
+  background-color: black;
+  color: white;
 }
 
 .single-card {
@@ -258,6 +384,7 @@
           align-items: center;
   margin-bottom: 1rem;
   position: relative;
+  cursor: pointer;
 }
 
 .single-card p {
@@ -267,10 +394,13 @@
   z-index: 1;
   padding: 1rem;
   max-width: 150px;
-  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.9);
   text-transform: uppercase;
   -ms-flex-item-align: end;
       align-self: flex-end;
+}
+
+.single-card:hover p {
+  color: black;
 }
 
 .single-card::before {
@@ -282,6 +412,11 @@
   bottom: 0;
   background: -webkit-gradient(linear, right top, left top, from(rgba(0, 0, 0, 0)), to(rgba(0, 0, 0, 0.3)));
   background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
+.single-card:hover::before {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(253, 253, 253, 0.5)), to(rgba(255, 255, 255, 0.9)));
+  background: linear-gradient(to bottom, rgba(253, 253, 253, 0.5), rgba(255, 255, 255, 0.9));
 }
 
 .card-01 {
@@ -505,5 +640,10 @@ ul {
 
 p {
   font-size: 15px;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
 }
 /*# sourceMappingURL=main.css.map */
