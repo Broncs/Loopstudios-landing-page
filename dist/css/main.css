@@ -104,31 +104,155 @@
   text-align: center;
 }
 
+.card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card-container .card-button {
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
+  color: black;
+  font-family: "Alata", sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  background: transparent;
+  font-weight: 700;
+  border: 1px solid black;
+  padding: 0.7rem 3rem;
+  text-align: center;
+  margin: 1rem auto;
+  display: block;
+}
+
 .single-card {
-  position: relative;
   height: 100px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 1rem;
 }
 
 .single-card p {
   color: white;
   font-family: "Josefin Sans", sans-serif;
-  font-size: 1.8rem;
+  font-size: 1.3rem;
   padding: 1rem;
-  position: absolute;
-  left: 0;
-  bottom: 0;
+  max-width: 150px;
+  text-shadow: 2px 4px 3px rgba(0, 0, 0, 0.9);
+  text-transform: uppercase;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 .card-01 {
   background-image: url("../../images/mobile/image-deep-earth.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
 }
 
 .card-02 {
   background-image: url("../../images/mobile/image-night-arcade.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
+}
+
+.card-03 {
+  background-image: url("../../images/mobile/image-soccer-team.jpg");
+}
+
+.card-04 {
+  background-image: url("../../images/mobile/image-grid.jpg");
+}
+
+.card-04 p {
+  max-width: 90px;
+}
+
+.card-05 {
+  background-image: url("../../images/mobile/image-from-above.jpg");
+}
+
+.card-06 {
+  background-image: url("../../images/mobile/image-pocket-borealis.jpg");
+}
+
+.card-07 {
+  background-image: url("../../images/mobile/image-curiosity.jpg");
+}
+
+.card-08 {
+  background-image: url("../../images/mobile/image-fisheye.jpg");
+}
+
+#footer {
+  background: black;
+  margin-top: 4rem;
+}
+
+.footer-container {
+  color: white;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 2rem 0;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Alata", sans-serif;
+}
+
+.footer-container img {
+  width: 50%;
+  margin-bottom: 1rem;
+}
+
+.footer-links li {
+  margin: 0.8rem;
+}
+
+.footer-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+  font-size: 1.7rem;
+  margin: 1rem 0 0;
+}
+
+.footer-socials li {
+  margin: 0 0.5rem;
+  cursor: pointer;
+}
+
+.copright {
+  font-size: 14px;
+  margin: 0.7rem 0;
+  text-align: center;
+  color: #8c8c8c;
 }
 
 body {
