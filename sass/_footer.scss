@@ -43,3 +43,38 @@
   text-align: center;
   color: $primary-dark-grey;
 }
+
+@media screen and (min-width: 800px) {
+  .footer-container {
+    display: block;
+    padding: 4rem 0;
+    text-align: left;
+    position: relative;
+
+    img {
+      width: 20%;
+      margin-bottom: 2rem;
+    }
+  }
+  .footer-links {
+    display: flex;
+    flex-direction: row;
+
+    li {
+      margin: 0;
+      margin-right: 3rem;
+      font-size: 1.2rem;
+    }
+  }
+  .footer-socials {
+    position: absolute;
+    right: 0;
+    top: 4rem;
+    margin: 0;
+  }
+  .copright {
+    position: absolute;
+    right: 0;
+    bottom: 3.7rem;
+  }
+}

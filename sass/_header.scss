@@ -3,9 +3,12 @@
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  width: 100%;
+
+  margin: 0 auto;
   min-height: 100vh;
   display: flex;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 }
 
@@ -14,13 +17,15 @@
   justify-content: space-between;
   align-items: center;
 
-  padding: 0 1rem;
+  padding: 0 2rem;
 
   position: fixed;
-  height: 50px;
+  height: 4rem;
+  width: 100%;
   top: 0;
-  right: 0;
   left: 0;
+  right: 0;
+  z-index: 10;
 }
 .nav-menu.nav-scrolled {
   background: black;
@@ -42,10 +47,62 @@
   border: 1px solid #fff;
   text-transform: uppercase;
   font-family: $josefin;
+  max-width: 300px;
+
+  margin: 0 2rem;
 
   h1 {
     padding: 1.2rem;
+    max-width: 250px;
+
     line-height: 1.1;
     letter-spacing: 1.2px;
+  }
+}
+
+.text-width {
+  width: 100%;
+}
+@media screen and (min-width: 800px) {
+  .header {
+    background-image: url("../../images/desktop/image-hero.jpg");
+    background-size: cover;
+    min-height: 100vh;
+    justify-content: flex-start;
+  }
+  .text-width {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+  .main-hero-text {
+    max-width: 60%;
+    font-size: 2.3rem;
+
+    h1 {
+      letter-spacing: 3px;
+      padding: 2rem;
+      max-width: 800px;
+    }
+  }
+  .nav-menu {
+    max-width: 1440px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hamburger {
+    display: none;
+  }
+
+  .nav-links {
+    display: flex;
+    color: $primary-white;
+    justify-content: center;
+    align-items: center;
+
+    li {
+      margin: 0 1rem;
+    }
   }
 }

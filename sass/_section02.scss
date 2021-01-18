@@ -6,6 +6,7 @@
     text-transform: uppercase;
     font-size: 1.7rem;
     text-align: center;
+    margin-bottom: 2rem;
   }
 }
 
@@ -38,11 +39,13 @@
   display: flex;
   align-items: center;
   margin-bottom: 1rem;
+  position: relative;
 
   p {
     color: $primary-white;
     font-family: $josefin;
     font-size: 1.3rem;
+    z-index: 1;
 
     padding: 1rem;
     max-width: 150px;
@@ -52,6 +55,16 @@
     align-self: flex-end;
   }
 }
+.single-card::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  background: linear-gradient(to left, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.3));
+}
+
 .card-01 {
   background-image: url("../../images/mobile/image-deep-earth.jpg");
 }
@@ -79,4 +92,78 @@
 }
 .card-08 {
   background-image: url("../../images/mobile/image-fisheye.jpg");
+}
+
+@media screen and (min-width: 800px) {
+  #creations {
+    margin-top: 10rem;
+
+    h2 {
+      text-align: left;
+      font-size: 2.5rem;
+      font-weight: weight(thin);
+    }
+  }
+  .card-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    position: relative;
+
+    .card-button {
+      position: absolute;
+      right: 15px;
+      top: -5.5rem;
+    }
+  }
+
+  .single-card {
+    height: 450px;
+    background-repeat: no-repeat;
+    background-position: top;
+    position: relative;
+    margin: 1rem;
+    p {
+      z-index: 2;
+      font-size: 1.4rem;
+      margin: 10px;
+    }
+  }
+  .single-card::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.5)
+    );
+  }
+
+  .card-01 {
+    background-image: url("../../images/desktop/image-deep-earth.jpg");
+  }
+  .card-02 {
+    background-image: url("../../images/desktop/image-night-arcade.jpg");
+  }
+  .card-03 {
+    background-image: url("../../images/desktop/image-soccer-team.jpg");
+  }
+  .card-04 {
+    background-image: url("../../images/desktop/image-grid.jpg");
+  }
+  .card-05 {
+    background-image: url("../../images/desktop/image-from-above.jpg");
+  }
+  .card-06 {
+    background-image: url("../../images/desktop/image-pocket-borealis.jpg");
+  }
+  .card-07 {
+    background-image: url("../../images/desktop/image-curiosity.jpg");
+  }
+  .card-08 {
+    background-image: url("../../images/desktop/image-fisheye.jpg");
+  }
 }
